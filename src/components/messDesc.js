@@ -2,9 +2,13 @@ import { useParams } from "react-router-dom";
 import fastfood from "../Images/fastfood.jpg";
 import AllMessData from "./Mess Data/AllMessData";
 import Reviews from "./Reviews";
+import { useRef } from "react";
+import Location from "./LocationOnMap";
 
 const MessDesc = () => {
     const { id } = useParams();
+    const locationRef = useRef();
+    const reviewsRef = useRef();
     const mess = AllMessData.filter(function (mess) {
         return mess.id === Number(id);
     })[0];
@@ -13,6 +17,9 @@ const MessDesc = () => {
         width: `${(mess.rating / 5) * 100}%`,
         whiteSpace: "nowrap",
         overflow: "hidden",
+    };
+    const scrollToHead = (section) => {
+        section.current.scrollIntoView({ behavior: "smooth" });
     };
     return (
         <>
@@ -28,7 +35,10 @@ const MessDesc = () => {
                         <div className="mb-4 text-xl font-semibold px-2">
                             {mess.rating}
                         </div>
-                        <div className="before:font-poppins before:content-['☆☆☆☆☆']  inline-block before:text-gray-400 before:text-3xl before:font-normal -my-8">
+                        <div
+                            className="before:font-poppins before:content-['☆☆☆☆☆']  inline-block before:text-gray-400 before:text-3xl before:font-normal -my-8 cursor-pointer"
+                            onClick={() => scrollToHead(reviewsRef)}
+                        >
                             <div
                                 style={starStyle}
                                 className="before:font-poppins before:content-['★★★★★'] before:text-amber-500 relative before:text-3xl -top-7 overflow-hidden -my-2"
@@ -44,7 +54,10 @@ const MessDesc = () => {
                         also.
                     </p>
                     <div className="my-5">
-                        <p className="text-xl font-bold text-black font-poppins">
+                        <p
+                            className="text-xl font-bold text-black font-poppins cursor-pointer"
+                            onClick={() => scrollToHead(locationRef)}
+                        >
                             Location -
                             <span
                                 style={{ color: "#f95f6c" }}
@@ -125,7 +138,9 @@ const MessDesc = () => {
                 </p>
             </div>
             <div className="font-poppins px-6">
-                <h1 className="text-3xl font-bold my-3">Mess Reviews</h1>
+                <h1 className="text-3xl font-bold my-3" ref={reviewsRef}>
+                    Mess Reviews
+                </h1>
                 <p className="px-4">
                     {" "}
                     <div className="before:content-['☆☆☆☆☆']  inline-block before:text-gray-400 before:text-4xl">
@@ -143,18 +158,26 @@ const MessDesc = () => {
                 </p>
             </div>
             <div className="font-poppins my-8 flex flex-col items-center">
-                <h1 className="text-3xl my-4 font-semibold">Yet Not Satisfied ??</h1>
+                <h1 className="text-3xl my-4 font-semibold">
+                    Yet Not Satisfied ??
+                </h1>
                 <form className="w-1/2 flex justify-center">
                     <input
-                        className="w-96 border-r-0 border outline-none border-gray-400 rounded-s-lg pl-3"
+                        className="w-96 border-r-0 border outline-none border-gray-400 rounded-s-lg px-3"
                         type="text"
                         name="question"
                         placeholder="Have Questions ? Throw them here.."
                     />
-                    <button type="submit" className="bg-pink-600 text-white rounded-e-md py-4 px-6">
+                    <button
+                        type="submit"
+                        className="bg-pink-600 text-white rounded-e-md py-4 px-6"
+                    >
                         Send
                     </button>
                 </form>
+            </div>
+            <div ref={locationRef}>
+                <Location location={mess.location}/>
             </div>
         </>
     );

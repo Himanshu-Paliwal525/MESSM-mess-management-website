@@ -7,7 +7,11 @@ const AllMessData = [
         price: 3000,
         nonveg: false,
         menu: null,
-        rating: 3.6
+        rating: 3.6,
+        location: {
+            lat: 25.20039,
+            lng: 75.830452,
+        },
     },
     {
         id: 2,
@@ -17,57 +21,81 @@ const AllMessData = [
         price: 2800,
         nonveg: false,
         menu: null,
-        rating: 3.7
+        rating: 3.7,
+        location: {
+            lat: 25.14851,
+            lng: 75.827782,
+        },
     },
     {
         id: 3,
         name: "Food Junction",
         mob: "7475338659",
-        address: "Landmark",
+        address: "rajeev gandhi nagar",
         price: 3300,
         nonveg: false,
         menu: null,
-        rating: 4.1
+        rating: 4.1,
+        location: {
+            lat: 25.15053,
+            lng: 75.84163,
+        },
     },
     {
         id: 4,
         name: "Girishu's Food",
         mob: "9956745634",
-        address: "City Park",
+        address: "Oxygen Park",
         price: 3500,
         nonveg: false,
         menu: null,
-        rating: 4.1
+        rating: 4.1,
+        location: {
+            lat: 25.19218,
+            lng: 75.85084,
+        },
     },
     {
         id: 5,
         name: "Aditya Mess",
         mob: "9932945634",
-        address: "City Park",
+        address: "CV Garden",
         price: 3500,
         nonveg: false,
         menu: null,
-        rating: 4.1
+        rating: 4.1,
+        location: {
+            lat: 25.187408,
+            lng: 75.85369,
+        },
     },
     {
         id: 6,
         name: "Annu Mess",
         mob: "78912345667",
-        address: "Gandhi Nagar",
+        address: "Nayapura circle",
         price: 3100,
         nonveg: false,
         menu: null,
-        rating: 4.1
+        rating: 4.1,
+        location: {
+            lat: 25.19218,
+            lng: 75.851324,
+        },
     },
     {
         id: 7,
         name: "Sangeeta Foods",
         mob: "9956744444",
-        address: "Nayapura",
+        address: "Gumanpura, Kota",
         price: 3400,
         nonveg: false,
         menu: null,
-        rating: 4.1
+        rating: 4.1,
+        location: {
+            lat: 25.168000895758972,
+            lng: 75.84772096571844,
+        },
     },
     {
         id: 8,
@@ -77,7 +105,11 @@ const AllMessData = [
         price: 2800,
         nonveg: false,
         menu: null,
-        rating: 4.1
+        rating: 4.1,
+        location: {
+            lat: 25.1942,
+            lng: 75.848819,
+        },
     },
     {
         id: 9,
@@ -85,9 +117,13 @@ const AllMessData = [
         mob: "9956767676",
         address: "Nanta",
         price: 3000,
-        nonveg: false,
+        nonveg: true,
         menu: null,
-        rating: 4.1
+        rating: 4.1,
+        location: {
+            lat: 25.20525167495715,
+            lng: 75.80659745217268,
+        },
     },
     {
         id: 10,
@@ -97,17 +133,21 @@ const AllMessData = [
         price: 3400,
         nonveg: false,
         menu: null,
-        rating: 4.1
+        rating: 4.1,
     },
     {
         id: 11,
         name: "Sapna Mess",
         mob: "7676844321",
-        address: "Nayakheda",
+        address: "Mahaveer Nagar",
         price: 3500,
         nonveg: true,
         menu: null,
-        rating: 4.1
+        rating: 4.1,
+        location: {
+            lat: 25.137437,
+            lng: 75.838014,
+        },
     },
     {
         id: 12,
@@ -117,37 +157,53 @@ const AllMessData = [
         price: 3300,
         nonveg: true,
         menu: null,
-        rating: 3.5
+        rating: 3.5,
+        location: {
+            lat: 25.223943,
+            lng: 75.880882,
+        },
     },
     {
         id: 13,
         name: "Niharika Mess",
         mob: "9956744344",
-        address: "Station Road",
+        address: "Talwandi",
         price: 3500,
         nonveg: false,
         menu: null,
-        rating: 3.5
+        rating: 3.5,
+        location: {
+            lat: 25.147289,
+            lng: 75.850353,
+        },
     },
     {
         id: 14,
         name: "Garima Mess",
         mob: "9956745999",
-        address: "Oxygen Park",
+        address: "Rajeev Gandhi Nagar",
         price: 3700,
         nonveg: false,
         menu: null,
-        rating: 3.5
+        rating: 3.5,
+        location: {
+            lat: 25.13823,
+            lng: 75.849079,
+        },
     },
     {
         id: 15,
         name: "Varsha Mess",
         mob: "7676899453",
-        address: "City Mall",
+        address: "Khade Ganesh Ji",
         price: 4500,
         nonveg: false,
         menu: null,
-        rating: 3.5
+        rating: 3.5,
+        location: {
+            lat: 25.114347656781387,
+            lng: 75.83360195005102,
+        },
     },
     {
         id: 16,
@@ -157,47 +213,67 @@ const AllMessData = [
         price: 3000,
         nonveg: false,
         menu: null,
-        rating: 3.5
+        rating: 3.5,
+        location: {
+            lat: 25.142819649960256,
+            lng: 75.85335147210176,
+        },
     },
     {
         id: 17,
         name: "Raju Mess",
         mob: "9959995634",
-        address: "Kunhadi",
+        address: "Landmark, Kunhadi",
         price: 3000,
         nonveg: false,
         menu: null,
-        rating: 3.5
+        rating: 3.5,
+        location: {
+            lat: 25.20142392277694,
+            lng: 75.8308113604601,
+        },
     },
     {
         id: 18,
         name: "Dev Foods",
         mob: "9955342167",
-        address: "Landmark",
+        address: "Kunhadi",
         price: 4000,
-        nonveg: false,
+        nonveg: true,
         menu: null,
-        rating: 3.5
+        rating: 3.5,
+        location: {
+            lat: 25.19818153198573,
+            lng: 75.82710991219915,
+        },
     },
     {
         id: 19,
         name: "Ananya Mess",
         mob: "9556789342",
-        address: "City Park",
+        address: "Keshavpura Circle",
         price: 3500,
         nonveg: false,
         menu: null,
-        rating: 3.5
+        rating: 3.5,
+        location: {
+            lat: 25.146394230145045,
+            lng: 75.83710475306039,
+        },
     },
     {
         id: 20,
         name: "Anek Food Corner",
         mob: "7231676767",
-        address: "Station Road",
+        address: "Rajeev Gandhi Nagar",
         price: 5000,
         nonveg: false,
         menu: null,
-        rating: 3.5
+        rating: 3.9,
+        location: {
+            lat: 25.13490027975719,
+            lng: 75.84713070854961,
+        },
     },
 ];
 
