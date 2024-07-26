@@ -9,7 +9,7 @@ if(index === 1) setStyle = {color: '#FF0000'};
 if(index === 2) setStyle = {color: '#FF4500'}
 if(index === 3) setStyle = {color: '#FF8C00'}
 if(index === 4) setStyle = {color: '#FFD700'}
-if(index === 5) setStyle = {color: '#FFFF00'}
+if(index === 5) setStyle = {color: '#FFD700'}
 
     
     const star = stars.map((empty, i) => {

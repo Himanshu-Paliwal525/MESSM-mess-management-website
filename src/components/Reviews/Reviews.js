@@ -5,15 +5,26 @@ const Reviews = () => {
     const [visible, setVisible] = useState(false);
     return (
         <>
-            <button
-                className="my-4 px-2 py-1 rounded-lg bg-green-700 text-white"
-                onClick={() => setVisible(true)}
-            >
-                Click here to add Review
-            </button>
-
+            <div className="flex justify-between w-1/3 items-center">
+                <button
+                    className="my-4 px-2 py-1 rounded-lg bg-green-700 text-white"
+                    onClick={() => setVisible(true)}
+                >
+                    Click here to add Review
+                </button>
+                {visible ? (
+                    <button
+                        className="my-4 px-2 py-1 rounded-lg text-white bg-red-400 hover:bg-red-600 duration-300"
+                        onClick={() => setVisible(false)}
+                    >
+                        Close
+                    </button>
+                ) : (
+                    <></>
+                )}
+            </div>
             {visible ? <AddReview /> : <></>}
-            <div className="w-1/2 border-2 rounded border-gray-400 px-4 py-4">
+            <div className="w-1/2 border-x border-y rounded shadow-lg px-4 py-4">
                 <div className="border-b border-b-gray-400">
                     <div className="flex justify-between items-center">
                         <h1 className="font-semibold text-lg">Himanshu</h1>

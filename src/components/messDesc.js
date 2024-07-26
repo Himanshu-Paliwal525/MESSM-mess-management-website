@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import fastfood from "../Images/fastfood.jpg";
 import AllMessData from "./Mess Data/AllMessData";
-import Reviews from "./Reviews";
+import Reviews from "./Reviews/Reviews";
 import { useRef } from "react";
 import Location from "./LocationOnMap";
+import Question from "./FAQ/questionComp";
+import QA from "./FAQ/Q&A";
 
 const MessDesc = () => {
     const { id } = useParams();
@@ -21,6 +23,9 @@ const MessDesc = () => {
     const scrollToHead = (section) => {
         section.current.scrollIntoView({ behavior: "smooth" });
     };
+    const FAQ = QA.map((ques, i) => {
+        return <Question question={ques.question} answer={ques.answer} />;
+    });
     return (
         <>
             <div className="flex justify-between">
@@ -59,18 +64,14 @@ const MessDesc = () => {
                             onClick={() => scrollToHead(locationRef)}
                         >
                             Location -
-                            <span
-                                style={{ color: "#f95f6c" }}
-                                className=" text-gray-600 text-normal pl-2"
-                            >
+                            <span className=" text-normal pl-2 text-pink-600">
                                 {mess.address[0].toUpperCase() +
                                     mess.address.slice(1)}
                             </span>
                         </p>
                         <p className="text-xl font-bold text-black font-poppins">
                             Contact No. -
-                            <span style={{ color: "#f95f6c" }}>
-                                {" "}
+                            <span className="text-pink-600">
                                 +91 {mess.mob}
                             </span>
                         </p>
@@ -157,6 +158,10 @@ const MessDesc = () => {
                     <Reviews />
                 </p>
             </div>
+            <div className="font-poppins my-8 ml-6">
+                <h1 className="text-3xl my-4 font-bold">FAQ</h1>
+                {FAQ}
+            </div>
             <div className="font-poppins my-8 flex flex-col items-center">
                 <h1 className="text-3xl my-4 font-semibold">
                     Yet Not Satisfied ??
@@ -177,7 +182,10 @@ const MessDesc = () => {
                 </form>
             </div>
             <div ref={locationRef}>
-                <Location location={mess.location}/>
+                <h1 className="text-3xl my-4 font-bold ml-6 font-poppins">
+                    Here you can find it out !!
+                </h1>
+                <Location location={mess.location} />
             </div>
         </>
     );

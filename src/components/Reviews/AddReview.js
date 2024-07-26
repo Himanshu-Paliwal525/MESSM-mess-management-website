@@ -12,9 +12,9 @@ const AddReview = () => {
                 <textarea
                     type="text"
                     rows={5}
-                    cols={40}
+                    cols={48}
                     placeholder="Share your experience.."
-                    className="text-md resize-none py-1 px-1 border-2 border-gray-400 rounded-lg flex outline-pink-600 mx-1"
+                    className="text-md resize-none py-1 px-1 border-x border-y shadow-md rounded-lg flex outline-none mx-1"
                 />
                 <button
                     type="submit"
