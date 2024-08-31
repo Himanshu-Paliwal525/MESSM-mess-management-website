@@ -18,7 +18,7 @@ const AddReview = () => {
                 />
                 <button
                     type="submit"
-                    className="text-md bg-pink-600 rounded-md text-white px-3 py-1"
+                    className="text-md bg-[#ff3131] rounded-md text-white px-3 py-1"
                 >
                     Add
                 </button>

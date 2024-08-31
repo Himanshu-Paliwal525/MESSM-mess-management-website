@@ -64,14 +64,14 @@ const MessDesc = () => {
                             onClick={() => scrollToHead(locationRef)}
                         >
                             Location -
-                            <span className=" text-normal pl-2 text-pink-600">
+                            <span className=" text-normal pl-2 text-[#ff3131]">
                                 {mess.address[0].toUpperCase() +
                                     mess.address.slice(1)}
                             </span>
                         </p>
                         <p className="text-xl font-bold text-black font-poppins">
                             Contact No. -
-                            <span className="text-pink-600">
+                            <span className="text-[#ff3131]">
                                 +91 {mess.mob}
                             </span>
                         </p>
@@ -175,7 +175,7 @@ const MessDesc = () => {
                     />
                     <button
                         type="submit"
-                        className="bg-pink-600 text-white rounded-e-md py-4 px-6"
+                        className="bg-[#ff3131] text-white rounded-e-md py-4 px-6"
                     >
                         Send
                     </button>

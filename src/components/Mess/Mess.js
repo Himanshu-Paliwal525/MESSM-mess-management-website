@@ -8,7 +8,7 @@ const Mess = ({ props }) => {
     const { name, mob, nonveg, price, address } = props;
     return (
         <>
-            <div className="rounded-lg w-72 h-64 mess">
+            <div className="rounded-lg w-72 h-64 px-2 py-2 transition-all duration-300 hover:px-4 hover:py-4 hover:border-[] hover:shadow-md hover:shadow-[#ff3131]">
                 <div className="flex text-xl font-bold justify-between items-center mb-2">
                     {name}
                     <img

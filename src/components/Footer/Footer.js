@@ -5,9 +5,7 @@ import pinterest from "../../Images/pinterest.png";
 const Footer = () => {
     return (
         <div className="footer">
-            <div>
-                <span>MESS-M</span>
-            </div>
+
             <ul className="footer-main">
                 <li>Company</li>
                 <li>Products</li>

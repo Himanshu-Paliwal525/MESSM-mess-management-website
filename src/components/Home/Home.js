@@ -36,7 +36,7 @@ const Home = () => {
 
     return (
         <>
-            <Link to={"/mess"} style={{ textDecoration: "none"}} >
+            <Link to={"/mess/budget-friendly"} style={{ textDecoration: "none"}} >
                 <Banner
                     style={null}
                     bannerContent={null}

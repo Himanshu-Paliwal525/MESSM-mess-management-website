@@ -16,14 +16,7 @@
     display: flex;
     align-items: center;
 }
-.footer > div > span {
-    color: #d2ffaa;
-    font-family: "Caveat Brush", cursive;
-    text-shadow: 1px 1px 0px #155e14;
-    font-size: 30px;
-    margin-bottom: 9px;
-    cursor: pointer;
-}
+
 .footer-main {
     justify-content: center;
     list-style: none;

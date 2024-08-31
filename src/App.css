@@ -36,41 +36,16 @@
         transform: rotate(360deg);
     }
 }
-.messm {
-    display: flex;
-    align-items: center;
-    padding: 12px 40px;
-    background-color: #f95f6c;
-}
-.messm > div {
-    display: flex;
+
+.mess-m {
     font-family: "Caveat Brush", cursive;
-    color: #d2f2bd;
-    text-shadow: 4px 1px 3px #155e14;
-    gap: 2%;
-    align-items: center;
+    font-weight: 900;
+    color: #ff3131;
+    text-shadow: 2px 0px 0px #155e14;
+
 }
-.messm > div > img {
-    height: 100px;
-}
-.app-login {
-    font-size: 15px;
-    padding: 4px 16px;
-    border: 2px solid #155e14;
-    font-family: "Poppins";
-    font-weight: 500;
-    background-color: #155e14;
-    box-shadow: 0 0 1px black;
-    color: #d2f2bd;
-    border-radius: 10px;
-}
-.app-login:hover {
-    color: #155e14;
-    background: #d2f2bd;
-}
-.app-login:active {
-    background: #88ca5e;
-}
+
+
 @media (min-width: 640px) {
     .app-login {
         padding: 6px 20px;

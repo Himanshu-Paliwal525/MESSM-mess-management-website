@@ -10,7 +10,7 @@ const Question = ({ question, answer }) => {
                     {question}
                 </li>
                 <button
-                    className="bg-pink-600 rounded-r-sm px-1"
+                    className="bg-[#ff3131] rounded-r-sm px-1"
                     onClick={() => setVisible((prev) => !prev)}
                 >
                     <DownArrow
@@ -18,8 +18,8 @@ const Question = ({ question, answer }) => {
                     />
                 </button>
             </div>
-            <p className="text-sm text-gray-500 pl-6 w-5/12 pr-4 py-2">
-                {visible ? answer : ""}
+            <p className={`${visible ? 'max-h-screen opacity-100':'max-h-0 opacity-0 overflow-hidden'} ease-in-out transition-all duration-1000 text-sm text-gray-500 pl-6 w-5/12 pr-4 py-2`}>
+                {answer}
             </p>
         </div>
     );

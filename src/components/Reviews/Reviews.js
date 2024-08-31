@@ -12,16 +12,16 @@ const Reviews = () => {
                 >
                     Click here to add Review
                 </button>
-                {visible ? (
+                {/* {visible ? (
                     <button
-                        className="my-4 px-2 py-1 rounded-lg text-white bg-red-400 hover:bg-red-600 duration-300"
+                        className="my-4 px-2 py-1 rounded-lg text-green-700 duration-300"
                         onClick={() => setVisible(false)}
                     >
                         Close
                     </button>
                 ) : (
                     <></>
-                )}
+                )} */}
             </div>
             {visible ? <AddReview /> : <></>}
             <div className="w-1/2 border-x border-y rounded shadow-lg px-4 py-4">
