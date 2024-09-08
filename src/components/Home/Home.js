@@ -36,7 +36,7 @@ const Home = () => {
 
     return (
         <>
-            <Link to={"/mess/budget-friendly"} style={{ textDecoration: "none"}} >
+            <Link to={"/budget-friendly"} style={{ textDecoration: "none"}} >
                 <Banner
                     style={null}
                     bannerContent={null}
@@ -46,7 +46,7 @@ const Home = () => {
                     }
                 />
             </Link>
-            <Link to={"/mess"} style={{ textDecoration: "none" }}>
+            <Link to={"/premium-meals"} style={{ textDecoration: "none" }}>
                 <Banner
                     style={banner2Style}
                     bannerContent={banner2content}
@@ -56,7 +56,7 @@ const Home = () => {
                     }
                 />
             </Link>
-            <Link to={"/mess"} style={{ textDecoration: "none" }}>
+            <Link to={"/fast-food"} style={{ textDecoration: "none" }}>
                 <Banner
                     style={banner3style}
                     bannerContent={banner3content}
@@ -66,7 +66,7 @@ const Home = () => {
                     }
                 />
             </Link>
-            <Link to={"/mess"} style={{ textDecoration: "none" }}>
+            <Link to={"/non-veg"} style={{ textDecoration: "none" }}>
                 <Banner
                     style={banner4style}
                     bannerContent={banner4content}

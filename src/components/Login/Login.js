@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/userContext";
 
-const Login = () => {
+const Login = ({ setLogout }) => {
+    const { setUser } = useContext(UserContext);
     const [status, setStatus] = React.useState("login");
     const [formData, setFormData] = React.useState({
         username: "",
@@ -25,8 +27,10 @@ const Login = () => {
             if (data.success) {
                 localStorage.setItem("auth-token", data.token);
                 console.log("token saved successfully!");
+                setLogout(true);
             }
             navigate("/");
+            setUser(formData.username);
         } else {
             alert("There is a problem in getting response!");
         }
@@ -48,9 +52,10 @@ const Login = () => {
             if (data.success) {
                 localStorage.setItem("auth-token", data.token);
                 console.log("token saved successfully!");
-                alert("You have signed up successfully!!");
+                setLogout(true);
             }
             navigate("/");
+            setUser(formData.username);
         } else {
             alert("There is a problem in getting response!");
         }

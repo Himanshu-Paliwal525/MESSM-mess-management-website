@@ -19,7 +19,7 @@ const AllMess = ({filter}) => {
     });
     return (
         <div className="">
-            <div>{filter}</div>
+            <div className="text-3xl my-4 ml-4 font-bold text-gray-700">{filter}</div>
             <div className="grid grid-cols-4">{mess}</div>;
         </div>
     );

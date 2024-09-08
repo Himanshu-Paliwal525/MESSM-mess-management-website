@@ -23,7 +23,7 @@ const Navbar = () => {
                 <NavLink to="/contact" className="nav-icon" style={checkStyle}>
                     <li>Contact Us</li>
                 </NavLink>
-                <li className="flex items-center px-[8px]">
+                <li className="flex items-center px-[8px] cursor-auto">
                 <input type="text" className={`${searchBar ? '':'hidden'} ml-16 outline-none px-2 rounded-sm h-[30px] border-b-2 border-black`} />
                 <button type="button" onClick={()=>setSearchBar(true)}> <img src={search} alt="" className="h-[24px]"/>
                 </button>

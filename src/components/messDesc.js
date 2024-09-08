@@ -2,13 +2,14 @@ import { useParams } from "react-router-dom";
 import fastfood from "../Images/fastfood.jpg";
 import AllMessData from "./Mess Data/AllMessData";
 import Reviews from "./Reviews/Reviews";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Location from "./LocationOnMap";
 import Question from "./FAQ/questionComp";
 import QA from "./FAQ/Q&A";
 
 const MessDesc = () => {
     const { id } = useParams();
+    const [reviews, setReviews] = useState([]);
     const locationRef = useRef();
     const reviewsRef = useRef();
     const mess = AllMessData.filter(function (mess) {
@@ -26,6 +27,21 @@ const MessDesc = () => {
     const FAQ = QA.map((ques, i) => {
         return <Question question={ques.question} answer={ques.answer} />;
     });
+    useEffect(() => {
+        const fetchReviews = async () => {
+            try {
+                const response = await fetch(
+                    `http://localhost:5000/reviews/${id}`
+                );
+                const data = await response.json();
+                console.log(data);
+                setReviews(data);
+            } catch (error) {
+                console.error("Error fetching reviews:", error);
+            }
+        };
+        fetchReviews();
+    }, [id]);
     return (
         <>
             <div className="flex justify-between">
@@ -155,7 +171,7 @@ const MessDesc = () => {
                         <br />
                         40 Reviews and 73 ratings
                     </h2>
-                    <Reviews />
+                    <Reviews reviews={reviews} setReviews={setReviews}/>
                 </p>
             </div>
             <div className="font-poppins my-8 ml-6">
