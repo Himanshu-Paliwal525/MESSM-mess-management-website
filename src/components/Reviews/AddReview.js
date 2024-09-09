@@ -26,7 +26,7 @@ const AddReview = ({ setVisible ,setReviews}) => {
             alert("Please Login first to review!");
             return;
         }
-        const response = await fetch("http://localhost:5000/addReview", {
+        const response = await fetch("https://messm-mess-management-website.onrender.com/addReview", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const AddReview = ({ setVisible ,setReviews}) => {
             alert("review successfully added!");
             try {
                 const response = await fetch(
-                    `http://localhost:5000/reviews/${id}`
+                    `https://messm-mess-management-website.onrender.com/reviews/${id}`
                 );
                 const data = await response.json();
                 console.log(data);

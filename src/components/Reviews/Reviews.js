@@ -12,7 +12,7 @@ const Reviews = ({ reviews, setReviews }) => {
             alert("Sorry! You can't review unless u login");
             return;
         }
-        const response = await fetch("http://localhost:5000/checkReview", {
+        const response = await fetch("https://messm-mess-management-website.onrender.com/checkReview", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

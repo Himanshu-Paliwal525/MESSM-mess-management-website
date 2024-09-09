@@ -17,7 +17,7 @@ const Login = ({ setLogout }) => {
     };
     const handleLogin = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/login", {
+        const response = await fetch("https://messm-mess-management-website.onrender.com/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
@@ -38,7 +38,7 @@ const Login = ({ setLogout }) => {
     const handleSignup = async (e) => {
         e.preventDefault();
         console.log(formData);
-        const response = await fetch("http://localhost:5000/signup", {
+        const response = await fetch("https://messm-mess-management-website.onrender.com/signup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

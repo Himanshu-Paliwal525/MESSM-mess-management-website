@@ -31,7 +31,7 @@ const MessDesc = () => {
         const fetchReviews = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/reviews/${id}`
+                    `https://messm-mess-management-website.onrender.com/reviews/${id}`
                 );
                 const data = await response.json();
                 console.log(data);
