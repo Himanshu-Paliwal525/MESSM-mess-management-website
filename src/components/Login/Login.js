@@ -51,7 +51,6 @@ const Login = ({ setLogout }) => {
             const data = await response.json();
             if (data.success) {
                 localStorage.setItem("auth-token", data.token);
-                console.log("token saved successfully!");
                 setLogout(true);
             }
             navigate("/");
