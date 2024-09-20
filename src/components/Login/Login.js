@@ -63,7 +63,7 @@ const Login = ({ setLogout }) => {
         <div className="flex justify-center">
             <form
                 onSubmit={status === "login" ? handleLogin : handleSignup}
-                className="login flex flex-col bg-lime-100 px-11 py-12 rounded-2xl my-6 gap-10"
+                className="font-poppins bg-[#d2f2bd] flex flex-col font-[500] sm:text-[18.5px] px-11 py-12 sm:rounded-2xl sm:my-6 gap-10 login min-w-full sm:min-w-0"
             >
                 <div className="flex flex-col">
                     <label htmlFor="username">Username:</label>

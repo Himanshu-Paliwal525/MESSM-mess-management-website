@@ -7,7 +7,6 @@ const PostReview = async (req, res) => {
 };
 const CheckReview = async (req, res) => {
     const { id, user } = req.body;
-    console.log(req.body);
     const review = await Review.findOne({ mess_id: id, name: user });
     if (review) {
         res.json({ success: true });
@@ -20,7 +19,6 @@ const GetReviews = async (req, res) => {
     const AllReviews = await Review.find({ mess_id: id });
     if (AllReviews) {
         res.json(AllReviews);
-        console.log(AllReviews);
     } else {
         console.log("Error fetching All the reviews.");
     }

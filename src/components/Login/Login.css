@@ -1,15 +1,10 @@
 .login {
-    font-size: 18.5px;
-    font-family: 'Poppins';
-    background-color: #d2f2bd;
     box-shadow: 0 0 1.5px black;
-    font-weight: 500;
 }
 
 .login input {
     outline: none;
     border: none;
-    /* box-shadow: 0 0 1px black; */
     max-width: 500px;
     font-weight: normal;
     height: 40px;
@@ -18,7 +13,6 @@
 }
 .login > button {
     box-shadow: 0 0 1px black;
-    font-size: 17px;
     padding: 7px 15px;
     background: #155e14;
     border-radius: 10px;

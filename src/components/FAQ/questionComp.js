@@ -4,8 +4,8 @@ import DownArrow from "./DownArrowSVG";
 const Question = ({ question, answer }) => {
     const [visible, setVisible] = useState(false);
     return (
-        <div className="ml-3 my-2">
-            <div className="flex list-none justify-end w-5/12">
+        <div className="mx-3 text-sm sm:text-base my-2">
+            <div className="flex list-none justify-end lg:w-5/12">
                 <li className=" py-1 bg-lime-100 px-3 flex-1 rounded-r-none rounded-lg cursor-default">
                     {question}
                 </li>

@@ -2,7 +2,7 @@ import { formatDistanceToNow } from "date-fns";
 
 const AllReviews = ({ reviews }) => {
     return (
-        <div className="w-1/2 border rounded shadow-lg">
+        <div className="lg:w-1/2 border rounded shadow-lg">
             {reviews.map((review, index) => {
                 const reviewDate = new Date(review.timestamp);
                 const timeAgo = formatDistanceToNow(reviewDate, {
@@ -17,21 +17,21 @@ const AllReviews = ({ reviews }) => {
                 if (review.rating === 5) setStyle = "text-green-700";
                 return (
                     <div
-                        className="border-b px-6 py-4 border-b-gray-400 last:border-0"
+                        className="border-b px-3 sm:px-6 py-2 sm:py-4 border-b-gray-400 last:border-0"
                         key={index}
                     >
                         <div className="flex justify-between">
-                            <h1 className="font-semibold text-lg">
+                            <h1 className="font-semibold sm:text-lg">
                                 {review.name}
                             </h1>
-                            <span className="text-gray-500 flex flex-col items-end gap-2 text-sm">
+                            <span className="text-gray-500 flex flex-col items-end  sm:gap-2 text-sm">
                                 {timeAgo}
                                 <span className="text-xs text-black font-medium">
                                     {exactDate}
                                 </span>
                             </span>
                         </div>
-                        <div className="p-4 text-sm text-gray-700">
+                        <div className="sm:p-4 text-sm text-gray-700">
                             <div
                                 className={` font-bold ${setStyle} text-xl rounded-full px-1`}
                             >

@@ -4,6 +4,7 @@ module.exports = {
     theme: {
         fontFamily: {
             poppins: "Poppins",
+            caveat: "'Caveat Brush', cursive",
         },
         extend: {},
     },

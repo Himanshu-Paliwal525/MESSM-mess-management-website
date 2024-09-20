@@ -33,7 +33,7 @@ const Reviews = ({ reviews, setReviews }) => {
 
     return (
         <>
-            <div className="flex justify-between w-1/3 items-center">
+            <div className="flex justify-between text-sm sm:text-base md:w-1/3 items-center">
                 <button
                     className="my-4 px-2 py-1 rounded-lg bg-green-700 text-white"
                     onClick={() => handleReviewButton()}
@@ -47,12 +47,12 @@ const Reviews = ({ reviews, setReviews }) => {
                 <></>
             )}
             <AllReviews reviews={reviews} />
-            <button
+            {/* <button
                 type="button"
                 className="bg-green-700 px-2 py-1 mt-2 rounded-md text-white"
             >
                 Load More..
-            </button>
+            </button> */}
         </>
     );
 };

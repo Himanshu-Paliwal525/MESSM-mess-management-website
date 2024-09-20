@@ -19,8 +19,7 @@ const Mess = ({ props }) => {
                 </div>
                 Rs. {price}
                 <p className="mess-p">
-                    <img src={call} className="h-5" alt="" /> +91{" "}
-                    {mob}
+                    <img src={call} className="h-5" alt="" /> +91 {mob}
                 </p>
                 <p className="mess-p">
                     <img src={location} className="h-5" alt="" />

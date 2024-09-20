@@ -3,7 +3,7 @@ import Star from "./starRating";
 import { useParams } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
 
-const AddReview = ({ setVisible ,setReviews}) => {
+const AddReview = ({ setVisible, setReviews }) => {
     const { id } = useParams();
     const { user } = useContext(UserContext);
     const [reviewData, setReviewData] = useState({
@@ -60,20 +60,22 @@ const AddReview = ({ setVisible ,setReviews}) => {
             <ul className="text-3xl">
                 <Star index={reviewData.rating} setReviewData={setReviewData} />
             </ul>
-            <form className="flex items-start my-4" onSubmit={handleReview}>
+            <form
+                className="sm:flex sm:items-start my-4"
+                onSubmit={handleReview}
+            >
                 <textarea
                     type="text"
                     rows={5}
-                    cols={48}
                     placeholder="Share your experience.."
-                    className="text-md resize-none py-1 px-1 border-x border-y shadow-md rounded-lg flex outline-none mx-1"
+                    className="text-md resize-none py-1 px-1 border shadow-md rounded-lg flex outline-none sm:mx-1 w-full my-1 sm:w-[400px] text-sm sm:text-base"
                     name="review"
                     value={reviewData.review}
                     onChange={handleReviewChange}
                 />
                 <button
                     type="submit"
-                    className="text-md bg-[#ff3131] rounded-md text-white px-3 py-1"
+                    className="text-sm sm:text-base bg-[#ff3131] rounded-md text-white px-3 py-1"
                 >
                     Add
                 </button>
