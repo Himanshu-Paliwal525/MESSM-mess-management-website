@@ -7,15 +7,28 @@ const AllMess = ({ filter }) => {
     const [totalMessCount, setTotalMessCount] = useState(0);
     const [currPage, setCurrPage] = useState(1);
 
+    const [isLoading, setIsLoading] = useState(false); // Loading state
+    const [error, setError] = useState(null); // Error state
+
     useEffect(() => {
         const fetchMessData = async () => {
-            const messData = await fetch(
-                `https://messm-mess-management-website.onrender.com/all-mess?page=${currPage}&filter=${filter}`
-            );
-            const fetchedData = await messData.json();
-
-            setTotalMessCount(fetchedData.total.count);
-            setAllMessData(fetchedData.hits);
+            setIsLoading(true);
+            setError(null);
+            try {
+                const response = await fetch(
+                    `https://messm-mess-management-website.onrender.com/all-mess?page=${currPage}&filter=${filter}`
+                );
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data");
+                }
+                const fetchedData = await response.json();
+                setTotalMessCount(fetchedData.total.count);
+                setAllMessData(fetchedData.hits);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setIsLoading(false); // Stop loading
+            }
         };
         fetchMessData();
     }, [currPage, filter]);
@@ -43,7 +56,11 @@ const AllMess = ({ filter }) => {
             <div className="text-3xl my-4 ml-4 font-bold text-gray-700">
                 {filter}
             </div>
-            <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2">{mess}</div>
+            {isLoading && <p className="text-center text-gray-500">Loading mess data...</p>}
+            {error && <p className="text-center text-red-500">Error: {error}</p>}
+            {!isLoading && !error && (
+                <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2">{mess}</div>
+            )}
             <div className="flex justify-center gap-20 my-16">
                 {currPage > 1 && (
                     <button
