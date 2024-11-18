@@ -57,7 +57,10 @@ const AllMess = ({ filter }) => {
                 {filter}
             </div>
             {isLoading && <p className="text-center text-gray-500">Loading mess data...</p>}
-            {error && <p className="text-center text-red-500">Error: {error}</p>}
+            {error && <p className="text-justify text-red-500 w-1/2 mx-20 text-lg">Due to insufficient funds, the backend service for this website is currently unavailable.
+                However, you can view detailed screenshots and features of this project on my portfolio by
+                clicking the button below. <br />
+                <a href="https://himanshu-paliwal-portfolio.vercel.app/" target="blank" className="font-bold cursor-pointer hover:underline text-red-700 text-center">Click Here</a></p>}
             {!isLoading && !error && (
                 <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2">{mess}</div>
             )}
